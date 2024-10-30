@@ -46,11 +46,11 @@ const App = () => {
             <div id="home">
                 <Home />
             </div>
-            <div id="features" >
-                <Features />
-            </div>
             <div id="about">
                 <About />
+            </div>
+            <div id="features" >
+                <Features />
             </div>
             <div id="login">
                 <Login />

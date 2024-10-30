@@ -10,7 +10,7 @@ const Home = () => {
                 </video>
                 <div className="onVideo">
                     <div className="inside-video">
-                        <h1>“ Chat with Your Personal Fitness Guide Now ! ”</h1>
+                        <h1>BEGIN YOUR FITNESS JOURNEY</h1>
                         <button className="video-btn">Get Started</button>
                     </div>
                 </div>

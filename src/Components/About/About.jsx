@@ -1,16 +1,34 @@
-
+import "./About.css"
+import care from "./image.jpg"
+import workout from "./image2.png"
+import food from "./image2.jpeg";
 const About = () => {
-    return(
+    return (
         <>
-        <h1>About</h1>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore doloremque a incidunt dignissimos quisquam, quasi voluptatibus voluptatum quam facere, at vitae magnam eos maxime! Assumenda sunt hic nobis distinctio!</h2>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore doloremque a incidunt dignissimos quisquam, quasi voluptatibus voluptatum quam facere, at vitae magnam eos maxime! Assumenda sunt hic nobis distinctio!</h2>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore doloremque a incidunt dignissimos quisquam, quasi voluptatibus voluptatum quam facere, at vitae magnam eos maxime! Assumenda sunt hic nobis distinctio!</h2>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore doloremque a incidunt dignissimos quisquam, quasi voluptatibus voluptatum quam facere, at vitae magnam eos maxime! Assumenda sunt hic nobis distinctio!</h2>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore doloremque a incidunt dignissimos quisquam, quasi voluptatibus voluptatum quam facere, at vitae magnam eos maxime! Assumenda sunt hic nobis distinctio!</h2>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore doloremque a incidunt dignissimos quisquam, quasi voluptatibus voluptatum quam facere, at vitae magnam eos maxime! Assumenda sunt hic nobis distinctio!</h2>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore doloremque a incidunt dignissimos quisquam, quasi voluptatibus voluptatum quam facere, at vitae magnam eos maxime! Assumenda sunt hic nobis distinctio!</h2>
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium voluptate omnis veniam optio. At culpa atque reprehenderit. Corporis sint dolorem dignissimos obcaecati nobis sit officiis facere blanditiis animi minima.</h1>
+            <div className="about-container">
+                <div className="box-container">
+                <div className="inner-box">
+                        <p>Workout Plans</p>
+                        <img src={workout}/>
+                    </div>
+                    <p className="box-para">Get customized workout plans tailored to your fitness level and goals, with AI-driven adjustments for optimal results.</p>
+                </div>
+                <div className="box-container">
+                <div className="inner-box">
+                        <p>Nutrition Meals</p>
+                        <img src={food}/>
+                    </div>
+                    <p className="box-para">Receive personalized meal plans and recipes designed to fuel your body and support your fitness goals efficiently.</p>
+                </div>
+                <div className="box-container">
+                    <div className="inner-box">
+                        <p>24/7 Support</p>
+                        <img src={care}/>
+                    </div>
+                    <p className="box-para">Our virtual coach is available around the clock to answer your questions and keep you motivated.</p>
+                </div>
+            </div>
+
         </>
     )
 }
