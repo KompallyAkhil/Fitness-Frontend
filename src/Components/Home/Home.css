@@ -6,7 +6,7 @@
 .background-video {
     position: relative;
     width: 100vw; 
-    height: 85vh; 
+    height: 80vh; 
     object-fit: cover; 
 }
 .inside-video{

@@ -5,7 +5,7 @@ import food from "./image2.jpeg";
 const About = () => {
     return (
         <>
-            <div className="about-container">
+      <div className="about-container">
                 <div className="box-container">
                 <div className="inner-box">
                         <p>Workout Plans</p>
@@ -28,7 +28,7 @@ const About = () => {
                     <p className="box-para">Our virtual coach is available around the clock to answer your questions and keep you motivated.</p>
                 </div>
             </div>
-
+           
         </>
     )
 }

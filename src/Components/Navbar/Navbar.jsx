@@ -45,7 +45,7 @@ const Navbar = () => {
                 </li>
                 <li className="header-para">
                     <Link to="about" smooth={true} duration={500}>
-                        Features
+                        FAQ
                     </Link>
                 </li>
                 <li className="header-para">

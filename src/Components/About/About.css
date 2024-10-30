@@ -15,6 +15,7 @@
 }
 .box-container:hover {
     transform: translateY(-10px); 
+    cursor: pointer;
 }
 .inner-box{
     display: flex;

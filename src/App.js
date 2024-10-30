@@ -36,7 +36,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Login from "./Components/Login/Login";
-import Features from "./Components/Features/Features";
+import FAQ from "./Components/FAQ/FAQ";
 
 
 const App = () => {
@@ -50,7 +50,7 @@ const App = () => {
                 <About />
             </div>
             <div id="features" >
-                <Features />
+                <FAQ/>
             </div>
             <div id="login">
                 <Login />
