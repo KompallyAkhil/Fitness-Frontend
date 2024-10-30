@@ -1,5 +1,39 @@
-.background-video{
-    width: 100vw;
-    object-fit: cover;
-    height: 85vh;
+.video-container {
+    position: relative;
+    width: 100vw; 
+    overflow: hidden;
+}
+.background-video {
+    position: relative;
+    width: 100vw; 
+    height: 85vh; 
+    object-fit: cover; 
+}
+.inside-video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.video-btn{
+    padding: 8px;
+    background-color: inherit;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.onVideo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

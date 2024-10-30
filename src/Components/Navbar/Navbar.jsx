@@ -1,25 +1,63 @@
+// import React from "react";
+// import "./Navbar.css";
+// import { Link} from "react-scroll";
+// const Navbar = () => {
+//     return (
+//         <>
+//             <nav className="header">
+//                 <ul className="header-inner">
+//                     <li className="header-para">
+//                         <Link to="home" smooth={true} duration={500}>About</Link>
+//                     </li >
+//                     <li className="header-para" smooth={true} duration={500}>
+//                         <Link to="features">Features</Link>
+//                     </li>
+//                     <li className="header-para" smooth={true} duration={500}>
+//                         <Link to="about">About</Link>
+//                     </li>
+//                     <li className="header-para" smooth={true} duration={500}>
+//                         <Link to="login">Login</Link>
+//                     </li>
+//                 </ul>
+//             </nav>
+//         </>
+//     );
+// };
+
+// export default Navbar;
+import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 const Navbar = () => {
     return (
         <>
-            <header className="header">
-                <div className="header-inner">
-                    <Link  className="header-para" to="/home">
-                        <p className="header-para">Home</p>
+        <nav className="header">
+            <ul className="header-inner">
+                <li className="header-para">
+                    <Link to="home" smooth={true} duration={500}>
+                        Home
                     </Link>
-                    <Link to="/features">
-                        <p className="header-para">Features</p>
+                </li>
+                <li className="header-para">
+                    <Link to="features" smooth={true} duration={500}>
+                        About Us
                     </Link>
-                    <Link to="/about">
-                        <p className="header-para">About Us</p>
+                </li>
+                <li className="header-para">
+                    <Link to="about" smooth={true} duration={500}>
+                        Features
                     </Link>
-                    <Link to="/login">
-                        <p className="header-para">Login</p>
+                </li>
+                <li className="header-para">
+                    <Link to="login" smooth={true} offset={-100} duration={500}>
+                        Login
                     </Link>
-                </div>
-            </header>
+                </li>
+            </ul>
+        </nav>
         </>
-    )
-}
-export default Navbar
+        
+    );
+};
+
+export default Navbar;
