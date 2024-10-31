@@ -10,14 +10,14 @@ const About = () => {
             <div className="main-container">
                 <div className="main-inner">
                     <div className="text-content">
-                            <p className="about-us">About Us</p>
+                        <p className="about-us">About Us</p>
                         <div className="text-container">
                             <p>
-                            Welcome to FitBot, your ultimate fitness companion! FitBot is an AI-driven chatbot designed to support your health and wellness journey, making it easier to stay motivated and achieve your goals. Whether you’re looking for customized workout routines, tailored meal plans, or healthy recipe ideas, FitBot provides a personalized experience suited to your lifestyle.
+                                Welcome to FitBot, your ultimate fitness companion! FitBot is an AI-driven chatbot designed to support your health and wellness journey, making it easier to stay motivated and achieve your goals. Whether you’re looking for customized workout routines, tailored meal plans, or healthy recipe ideas, FitBot provides a personalized experience suited to your lifestyle.
                             </p>
                             <p>With a focus on simplicity and accessibility, we provide instant advice and tailored fitness plans to suit your unique needs. Whether you're a fitness enthusiast or just starting out, FitBot offers real-time support, helping you stay motivated and on track, wherever you are.</p>
 
-                                <p>Join us on a journey to better health, and let FitBot be your virtual fitness coach!</p>
+                            <p>Join us on a journey to better health, and let FitBot be your virtual fitness coach!</p>
                         </div>
 
                     </div>

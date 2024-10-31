@@ -8,34 +8,31 @@ const FAQ = () => {
                 </div>
                 <div className="faq-questions">
 
-                    <details>
-                        <summary>What is StreamSnatch and why you might need it for </summary>
-                        <p>Downloading and saving photos or/and videos from Instagram is now possible by using igram.world. It is the easiest and most convenient way to enjoy “the watching for later those moments of happiness and memories.”</p>
-                    </details>
-                    <details>
-                        <summary>Where are the download giles stored?</summary>
-                        <p>Well, normally, you go to the latest downloading list by pressing Ctrl+J. It also depends on how your operating system and browser are set, as it can also open in a new browser tab once you get the list. You will see how to find the storage of your downloaded files.</p>
-                    </details>
-                    <details>
-                        <summary>What is the quality of the Instagram and Facebook videos I save through this video downloader?</summary>
-                        <p>All videos you download from Instagram will be saved in the same quality (MP4, AVI, MOV, etc.), which have been uploaded in the post. Our Instagram Downloader is meant to keep up with the same quality as the original videos. Quality always matters, and we know that!</p>
-                    </details>
-                    <details>
-                        <summary>Can I download multiple videos at a time with StreamSnatch ?</summary>
-                        <p>Unfortunately, you cannot! The StreamSnatch video downloader will help you download videos only one at a time. Our advice will be to create a document where all your links are copied and then paste them onto our Instagram Video Downloader. You will even get the chance not to miss any of the posts you want to save from Instagram.</p>
-                    </details>
-                    <details>
-                        <summary>StreamSnatch and its advantages:</summary>
-                        <p>By inserting an address bar, you will get fast and appropriate access to it.
-                            If there is any desired video in a public Instagram post, now you can download it directly.
-                            Multiple photos on a single picture are fine now. There will be links for downloading all of them.
-                            The videos that are downloaded for Instagram are of high quality.
-                            No need for extra adware programs or lack of time when downloading from Instagram.</p>
-                    </details>
-                    <details>
-                        <summary>What device can I use to download Instagram and Facebook Videos</summary>
-                        <p>You can use whatever device you have that is suitable to you and has a web browser, like a PC, a desktop, a laptop, a Mac, an iPhone, or any other smartphone. The iGram is a web tool, a cloud-based service that does not require installation. You must copy the URL from Instagram and paste it into the tool: easy and time-saving!</p>
-                    </details>
+                <details>
+    <summary>What is FitBot and how can it help you?</summary>
+    <p>FitBot is your ultimate AI-powered fitness companion. Designed to help you achieve your health and wellness goals, FitBot offers personalized workout routines, customized meal plans, and healthy recipe suggestions tailored to your unique needs.</p>
+</details>
+<details>
+    <summary>How do I get personalized workout plans?</summary>
+    <p>Simply chat with FitBot! Share your fitness goals, current fitness level, and available equipment. FitBot will generate a workout plan designed specifically for you, helping you stay motivated and on track.</p>
+</details>
+<details>
+    <summary>Can FitBot help me with meal planning?</summary>
+    <p>Absolutely! FitBot can create meal plans based on your dietary preferences and fitness goals. Whether you want to lose weight, build muscle, or maintain a healthy lifestyle, FitBot provides nutritious and delicious recipe ideas.</p>
+</details>
+<details>
+    <summary>Is FitBot suitable for beginners?</summary>
+    <p>Yes! FitBot is designed for everyone, whether you're just starting your fitness journey or are an experienced athlete. It tailors recommendations to your fitness level and adjusts as you progress.</p>
+</details>
+<details>
+    <summary>What kind of support does FitBot offer?</summary>
+    <p>FitBot provides real-time support and motivation. You can ask questions about exercises, receive tips on maintaining a balanced diet, and get encouragement to help you stay committed to your goals.</p>
+</details>
+<details>
+    <summary>What devices can I use to access FitBot?</summary>
+    <p>You can access FitBot on any device with a web browser, including PCs, laptops, tablets, and smartphones. It's easy and convenient—just log in, and you're ready to go!</p>
+</details>
+
                 </div>
             </div>
         </>
