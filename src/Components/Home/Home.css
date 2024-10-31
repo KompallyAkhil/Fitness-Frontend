@@ -48,11 +48,22 @@
     height: 80px;
     width: 80px;
     border: 2px solid black;
+    cursor: pointer;
 }
 .model-image{
     object-fit: cover;
     height: 70px;
     width: 70px;
     border-radius: 100px;
+}
+.bot-container{
+    position: fixed;
+    right: 120px;
+    bottom: 30px;
+    width: 400px;
+    z-index: 999;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
 }
 
