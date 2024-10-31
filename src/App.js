@@ -38,11 +38,11 @@ import About from "./Components/About/About";
 import Login from "./Components/Login/Login";
 import FAQ from "./Components/FAQ/FAQ";
 
-
 const App = () => {
     return (
         <>
             <Navbar />
+            
             <div id="home">
                 <Home />
             </div>

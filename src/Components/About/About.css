@@ -17,12 +17,60 @@
     transform: translateY(-10px); 
     cursor: pointer;
 }
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.main-inner {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 92%;
+    border-radius: 8px;
+    width: 100%;    
+}
+.about-us{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+}
+.text-container {
+    padding: 45px;
+}
+.text-container p{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text-content {
+    flex: 2;
+    justify-content: center;
+}
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.image-content img {
+    max-width: 100%; 
+    height: 500px;
+    border-radius: 8px;
+}
+
+.main-inner{
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+}
 .inner-box{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-img{
+.logo{
     height: 80px;
     object-fit: contain;
 }
