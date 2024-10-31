@@ -37,3 +37,22 @@
     font-size: 19px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.model-container {
+    position: fixed; 
+    bottom: 20px;
+    right: 30px; 
+    z-index: 999;
+}
+.model-container button{
+    border-radius: 100px;
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+}
+.model-image{
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+}
+

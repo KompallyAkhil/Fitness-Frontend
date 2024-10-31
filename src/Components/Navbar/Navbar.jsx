@@ -1,62 +1,23 @@
-// import React from "react";
-// import "./Navbar.css";
-// import { Link} from "react-scroll";
-// const Navbar = () => {
-//     return (
-//         <>
-//             <nav className="header">
-//                 <ul className="header-inner">
-//                     <li className="header-para">
-//                         <Link to="home" smooth={true} duration={500}>About</Link>
-//                     </li >
-//                     <li className="header-para" smooth={true} duration={500}>
-//                         <Link to="features">Features</Link>
-//                     </li>
-//                     <li className="header-para" smooth={true} duration={500}>
-//                         <Link to="about">About</Link>
-//                     </li>
-//                     <li className="header-para" smooth={true} duration={500}>
-//                         <Link to="login">Login</Link>
-//                     </li>
-//                 </ul>
-//             </nav>
-//         </>
-//     );
-// };
-
-// export default Navbar;
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-scroll";
-const Navbar = () => {
+const Navbar = ({ scrollToSection, refs }) => {
     return (
-        <>
         <nav className="header">
             <ul className="header-inner">
-                <li className="header-para">
-                    <Link to="home" smooth={true} duration={500}>
-                        Home
-                    </Link>
+                <li className="header-para" onClick={() => scrollToSection(refs.homeRef)}>
+                    Home
                 </li>
-                <li className="header-para">
-                    <Link to="features" smooth={true} duration={500}>
-                        About Us
-                    </Link>
+                <li className="header-para" onClick={() => scrollToSection(refs.aboutRef)}>
+                    About Us
                 </li>
-                <li className="header-para">
-                    <Link to="about" smooth={true} duration={500}>
-                        FAQ
-                    </Link>
+                <li className="header-para" onClick={() => scrollToSection(refs.faqRef)}>
+                    FAQ
                 </li>
-                <li className="header-para">
-                    <Link to="login" smooth={true} offset={-100} duration={500}>
-                        Login
-                    </Link>
+                <li className="header-para" onClick={() => scrollToSection(refs.loginRef)}>
+                    Login
                 </li>
             </ul>
         </nav>
-        </>
-        
     );
 };
 

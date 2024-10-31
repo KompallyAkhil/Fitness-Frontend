@@ -1,5 +1,6 @@
 import videos from "./video2.mp4";
 import "./Home.css";
+import genie from "./bot.png"
 const Home = () => {
     return (
         <>
@@ -15,6 +16,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <div className="model-container">
+                <button><img className="model-image" src={genie}/></button>
+        </div>
             
         </>
     )
