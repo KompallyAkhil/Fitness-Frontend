@@ -1,12 +1,44 @@
 import videos from "./video2.mp4";
 import "./Home.css";
-import genie from "./bot.png"
-import { useState } from "react";
+import bot from "./bot.png"
+import user from "./user.png"
+import { useEffect, useState, useRef } from "react";
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isInput, setIsInput] = useState("");
+    const [messages, setMessages] = useState([]);
+    const [showBotMessage, setShowBotMessage] = useState(false);
+    const messagesEndRef = useRef();
     const openChat = () => {
         setIsOpen(!isOpen)
     }
+    function changeInput(e) {
+        setIsInput(e.target.value);
+    }
+    async function sendMessage() {
+        if (isInput.trim()) {
+            console.log(isInput)
+            const newMessage = { text: isInput, isUser: true };
+            setMessages([...messages, newMessage]);
+            setIsInput('');
+            setTimeout(() => {
+                const botMessage = { text: "With a focus on simplicity and accessibility, we provide instant advice and tailored fitness plans to suit your unique needs. Whether you're a fitness enthusiast or just starting out, FitBot offers real-time support, helping you stay motivated and on track, wherever you are.", isUser: false };
+                setMessages((prevMessages) => [...prevMessages, botMessage]);
+            }, 1000);
+        }
+    };
+    useEffect(() => {
+        setTimeout(() => {
+            setShowBotMessage(true);
+        }, 3000);
+        return () => clearTimeout(); 
+    }, []);
+    const clickEnter = (e) => {
+        if (e.key === "Enter") sendMessage();
+    }
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, [messages])
     return (
         <>
             <div className="video-container">
@@ -22,16 +54,43 @@ const Home = () => {
                 </div>
             </div>
             <div className="model-container">
-                <button><img className="model-image" onClick={openChat} src={genie} /></button>
+                <button><img className="model-image" alt="image" onClick={openChat} src={bot} /></button>
             </div>
-            {isOpen && (
-                <div className="chatbot">
-                    <h1>Hello</h1>
-                    <div class="chat-input">
-                        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-                        <span id="send-btn" class="material-symbols-rounded">send</span>
+            <div>
+                {isOpen && (
+                    <div className="chatbot">
+                        <h3>Chat With Bot</h3>
+                        <div className="chat-messages">
+                            {showBotMessage && (
+                                <div className="chat-bubble bot">
+                                    <img className="chat-image" src={bot} alt="Bot" />
+                                    <p>How Can I Help You ?</p>
+                                </div>
+                            )}
+                            {messages.map((msg, index) => (
+                                <div key={index} className={`chat-bubble ${msg.isUser ? 'user' : 'bot'}`}>
+                                    {msg.isUser && <img className="chat-image" src={user} alt="User" />}
+                                    {!msg.isUser && <img className="chat-image" src={bot} alt="Bot" />}
+                                    {msg.text}
+                                </div>
+                            ))}
+                            <div ref={messagesEndRef} />
+                        </div>
+                        <div className="chat-input">
+                            <textarea
+                                autoFocus
+                                placeholder="Ask a question . . ."
+                                value={isInput}
+                                onChange={changeInput}
+                                spellCheck="false"
+                                required
+                                onKeyDown={clickEnter}
+                            ></textarea>
+                        </div>
                     </div>
-                </div>)}
+                )}
+            </div>
+
         </>
     )
 }

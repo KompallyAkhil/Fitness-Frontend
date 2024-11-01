@@ -1,47 +1,47 @@
-.video-container {
-    position: relative;
-    width: 100vw; 
-    overflow: hidden;
+.video-container{
+  position: relative;
+  width: 100vw; 
+  overflow: hidden;
 }
 .background-video {
-    position: relative;
-    width: 100vw; 
-    height: 85vh; 
-    object-fit: cover; 
+  position: relative;
+  width: 100vw; 
+  height: 85vh; 
+  object-fit: cover; 
 }
 .inside-video{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+flex-direction: column;
 }
 .video-btn{
-    padding: 8px;
-    background-color: inherit;
-    width: 150px;
-    height: 50px;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    cursor: pointer;
-    border: 2px solid white;
+  padding: 8px;
+  background-color: inherit;
+  width: 150px;
+  height: 50px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  border: 2px solid white;
 }
 .onVideo {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    color: white; 
-    font-size: 19px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  font-size: 19px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .model-container {
-    position: fixed; 
-    bottom: 20px;
-    right: 30px; 
-    z-index: 999;
+  position: fixed; 
+  bottom: 20px;
+  right: 30px; 
+  z-index: 999;
 }
 .model-container button{
     border-radius: 100px;
@@ -65,53 +65,72 @@
     height: 450px;
     background-color: white;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.chat-messages {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.chat-bubble {
+  padding: 10px 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  border-radius: 15px;
+  font-size: 14px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+.chat-image{
+  object-fit: cover;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+}
+.user {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #ffffff;
+  border-bottom-right-radius: 5px;
 }
 
-.chatbot .chat-input {
-    display: flex;
-    gap: 5px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #fff;
-    /* padding: 3px 20px; */
-    border-top: 1px solid #ddd;
-  }
-  
-  .chat-input textarea {
-    height: 50px;
-    width: 100%;
-    border: none;
-    outline: none;
-    resize: none;
-    max-height: 180px;
-    font-size: 0.95rem;
-  }
-  
-  .chat-input span {
-    align-self: flex-end;
-    color: #724ae8;
-    cursor: pointer;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    visibility: hidden;
-    font-size: 1.35rem;
-  }
-  
-  .chat-input textarea:valid~span {
-    visibility: visible;
-  }  
-  .chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
-    background: #fff;
-    border-radius: 25px;
-  }
-  
-  .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 25px;
-  }
+.bot {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  color: #333333;
+  border-bottom-left-radius: 5px;
+}
+.chatbot h3{
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.chat-input{
+  display: flex;
+}
+.chat-input textarea{
+  height: 35px;
+  width: 100%;
+  resize: none;
+  font-size: 14px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 800;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.user .chat-image {
+  order: 1;
+  margin-left: 8px;
+
+}
+
