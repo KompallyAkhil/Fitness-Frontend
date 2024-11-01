@@ -21,11 +21,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding-top: 70px;
     transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 .main-container:hover{
-    transform: translateY(15px); 
+    transform: scale(1.02); 
 }
 .main-inner {
     display: flex;

@@ -25,10 +25,13 @@ const Home = () => {
                 <button><img className="model-image" onClick={openChat} src={genie} /></button>
             </div>
             {isOpen && (
-                <div className="bot-container">
+                <div className="chatbot">
                     <h1>Hello</h1>
+                    <div class="chat-input">
+                        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                        <span id="send-btn" class="material-symbols-rounded">send</span>
+                    </div>
                 </div>)}
-
         </>
     )
 }

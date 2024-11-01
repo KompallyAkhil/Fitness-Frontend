@@ -6,7 +6,7 @@
 .background-video {
     position: relative;
     width: 100vw; 
-    height: 80vh; 
+    height: 85vh; 
     object-fit: cover; 
 }
 .inside-video{
@@ -56,7 +56,7 @@
     width: 70px;
     border-radius: 100px;
 }
-.bot-container{
+.chatbot{
     position: fixed;
     right: 120px;
     bottom: 30px;
@@ -67,3 +67,51 @@
     border-radius: 15px;
 }
 
+.chatbot .chat-input {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    /* padding: 3px 20px; */
+    border-top: 1px solid #ddd;
+  }
+  
+  .chat-input textarea {
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    max-height: 180px;
+    font-size: 0.95rem;
+  }
+  
+  .chat-input span {
+    align-self: flex-end;
+    color: #724ae8;
+    cursor: pointer;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    font-size: 1.35rem;
+  }
+  
+  .chat-input textarea:valid~span {
+    visibility: visible;
+  }  
+  .chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 25px;
+  }
+  
+  .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 25px;
+  }
