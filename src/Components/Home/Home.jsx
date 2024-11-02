@@ -3,6 +3,7 @@ import "./Home.css";
 import bot from "./bot.png"
 import user from "./user.png"
 import { useEffect, useState, useRef } from "react";
+import axios from "axios"
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isInput, setIsInput] = useState("");
@@ -10,7 +11,7 @@ const Home = () => {
     const [showBotMessage, setShowBotMessage] = useState(false);
     const messagesEndRef = useRef();
     const openChat = () => {
-        setIsOpen(!isOpen)
+        setIsOpen(!isOpen);
     }
     function changeInput(e) {
         setIsInput(e.target.value);
@@ -20,9 +21,12 @@ const Home = () => {
             console.log(isInput)
             const newMessage = { text: isInput, isUser: true };
             setMessages([...messages, newMessage]);
-            setIsInput('');
+            setIsInput("");
+            const response = await axios.get(`http://localhost:8000/chat?text=${isInput}`);
+            const result = response.data.response;
+            console.log(result)
             setTimeout(() => {
-                const botMessage = { text: "With a focus on simplicity and accessibility, we provide instant advice and tailored fitness plans to suit your unique needs. Whether you're a fitness enthusiast or just starting out, FitBot offers real-time support, helping you stay motivated and on track, wherever you are.", isUser: false };
+                const botMessage = { text: result, isUser: false };
                 setMessages((prevMessages) => [...prevMessages, botMessage]);
             }, 1000);
         }
@@ -54,7 +58,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="model-container">
-                <button><img className="model-image" alt="image" onClick={openChat} src={bot} /></button>
+                <button><img className="model-image" alt="bot-Image" onClick={openChat} src={bot} /></button>
             </div>
             <div>
                 {isOpen && (
