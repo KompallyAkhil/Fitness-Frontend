@@ -24,7 +24,6 @@ const Home = () => {
             setIsInput("");
             const response = await axios.get(`http://localhost:8000/chat?text=${isInput}`);
             const result = response.data.response;
-            console.log(result)
             setTimeout(() => {
                 const botMessage = { text: result, isUser: false };
                 setMessages((prevMessages) => [...prevMessages, botMessage]);

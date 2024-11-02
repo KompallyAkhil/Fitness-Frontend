@@ -13,9 +13,6 @@ const Navbar = ({ scrollToSection, refs }) => {
                 <li className="header-para" onClick={() => scrollToSection(refs.faqRef)}>
                     FAQ
                 </li>
-                <li className="header-para" onClick={() => scrollToSection(refs.loginRef)}>
-                    Login
-                </li>
             </ul>
         </nav>
     );
