@@ -7,8 +7,8 @@ import ProtectedRoutes from "./ProtectedRoutes";
 const App = () => {
     return (
         <>
-      
         <Routes>
+            <Route path="/" element={<Navigate to="/Login" />} />
             <Route path="/Login" element={<Login/>}></Route>
             <Route path="/" element={<ProtectedRoutes/>}>
                 <Route path="/Fit" element={<Fit/>}></Route>
