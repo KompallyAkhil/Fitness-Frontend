@@ -1,27 +1,30 @@
-import "./Login.css"
-import { Link } from "react-router-dom"
+import React, { useEffect, useState } from "react";
+import bgimage from "./login.avif";
+import GoogleButton from 'react-google-button'
+import {auth,provider} from "../Config/Config.js"
+import {signInWithPopup} from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
-    return (
+    const navigate = useNavigate()
+    const [email,setEmail] = useState('');
+    const signWithGoogle = () => {
+        signInWithPopup(auth,provider).then((data)=>{
+            setEmail(data.user.email);
+            localStorage.setItem("email",data.user.email);
+            navigate('/Fit');
+        })
+    }
+    useEffect(()=>{
+        const storedEmail = setEmail(localStorage.getItem('email'))
+        if (storedEmail) {
+            navigate('/Fit');
+        }
+    },[navigate]) 
+    return(
         <>
-      
-        <div className="auth-container">
-            <h2>Login to FitBot</h2>
-            <form className="auth-form">
-                <div className="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="Enter your email" required />
-                </div>
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" placeholder="Enter your password" required />
-                </div>
-                <Link to="/Fit"><button type="submit" className="auth-btn">Login</button></Link>
-                <p className="auth-text">
-                    Don't have an account? <a href="/">Sign Up</a>
-                </p>
-            </form>
-        </div>
+        <GoogleButton onClick={signWithGoogle} />
+        <img className="login-img" src={bgimage} />
         </>
     )
 }
-export default Login
+export default Login;

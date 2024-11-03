@@ -3,7 +3,7 @@ import "./Home.css";
 import bot from "./bot.png"
 import user from "./user.png"
 import { useEffect, useState, useRef } from "react";
-import axios from "axios"
+import axios from "axios";
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isInput, setIsInput] = useState("");
@@ -18,7 +18,6 @@ const Home = () => {
     }
     async function sendMessage() {
         if (isInput.trim()) {
-            console.log(isInput)
             const newMessage = { text: isInput, isUser: true };
             setMessages([...messages, newMessage]);
             setIsInput("");
@@ -41,7 +40,7 @@ const Home = () => {
     }
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }, [messages])
+    }, [messages]);
     return (
         <>
             <div className="video-container">
@@ -77,7 +76,7 @@ const Home = () => {
                                     {msg.text}
                                 </div>
                             ))}
-                            <div ref={messagesEndRef} />
+                            <div ref={messagesEndRef}/>
                         </div>
                         <div className="chat-input">
                             <textarea

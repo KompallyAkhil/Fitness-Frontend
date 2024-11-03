@@ -1,15 +1,18 @@
 import React  from "react";
 import "./App.css";
-import { Route,Routes } from "react-router-dom";
+import { Route,Routes, Navigate} from "react-router-dom";
 import Login from "./Components/Login/Login"
 import Fit from "./Components/Fit/Fit";
+import ProtectedRoutes from "./ProtectedRoutes";
 const App = () => {
     return (
         <>
       
         <Routes>
-            <Route index element={<Login/>}></Route>
-            <Route path="/Fit" element={<Fit/>}></Route>
+            <Route path="/Login" element={<Login/>}></Route>
+            <Route path="/" element={<ProtectedRoutes/>}>
+                <Route path="/Fit" element={<Fit/>}></Route>
+            </Route>
         </Routes>
        
           
