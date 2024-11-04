@@ -6,43 +6,22 @@ html{
 }
 .container {
     width: 500px;
-    height: 500px;
+    height: 475px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-/* .container-heading{
-    display: flex;
-    justify-content: space-evenly;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    cursor: pointer;
-}
-label{
-    font-size: 25px;
-}
-input{
-    width: 100%;
-    height: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
 .login-container{
-    display:flex;
-
+    margin-top: 35px;
 }
-.GoogleButton:hover {
-    background-color: #357ae8;
-} */
 .container-heading {
     display: flex;
     justify-content: space-evenly;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    cursor: pointer;
-    margin-bottom: 20px;
     cursor: pointer;
 }
 
@@ -50,7 +29,6 @@ input{
     font-size: 24px;
     font-weight: 600;
     color: #333;
-    padding: 10px;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s, color 0.3s;
 }
@@ -63,14 +41,15 @@ input{
 
 label {
     font-size: 18px;
+    font-weight: 800;
     color: #333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 5px;
     display: block;
 }
-
 input {
-    width: 100%;
-    height: 40px;
+    width: 98%;
+    height: 30px;
     margin-bottom: 20px;
     padding: 8px;
     border: 1px solid #ddd;
@@ -100,10 +79,10 @@ button {
 button:hover {
     background-color: #005bb5;
 }
-
-.GoogleButton {
-    width: 100%;
-    margin-top: 15px;
+.center-google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .GoogleButton:hover {
@@ -124,8 +103,13 @@ button:hover {
 .signup-container {
     display: none;
 }
-
-/* Toggle Button Styles */
+.bottom-container{
+    text-align: center;
+}
+.bottom-container p {
+    font-weight: 800;
+    font-size: 20px;
+}
 button {
     cursor: pointer;
     transition: background-color 0.3s ease;
