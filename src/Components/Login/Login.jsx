@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import bgimage from "./login.avif";
-import video from "./video3.mp4"
+import axios from "axios";
 import GoogleButton from 'react-google-button'
 import { auth, provider } from "../Config/Config.js"
 import { signInWithPopup } from "firebase/auth";
@@ -9,6 +8,17 @@ import "./Login.css"
 const Login = () => {
     const navigate = useNavigate()
     const [email, setEmail] = useState('');
+    const [loginDetails,setLoginDetails] = useState({
+        Username : "",
+        Password : ""
+    })
+    const [signUp,setSignup] = useState({
+        Username : "",
+        EmailID : "",
+        Password : "",
+        ConfirmPassword : ""
+    })
+    const [status,setStatus] = useState(false);
     const [showlogin, setShowLogin] = useState(true);
     const [showSignIn, setSignIn] = useState(false)
     const signWithGoogle = () => {
@@ -32,6 +42,50 @@ const Login = () => {
         setShowLogin(false);
         setSignIn(true);
     }
+    const changeLoginDetails = e => {
+        setLoginDetails({...loginDetails ,[e.target.name] : e.target.value});
+    }
+    const changeRegisterDetails = e => {
+        setSignup({...signUp,[e.target.name]:e.target.value});
+    }
+    const LoginUser = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post(`http://localhost:8000/SignIn`,loginDetails);
+            console.log(response.data)
+            setStatus(response.data.loginStatus);
+            if (response.data.loginStatus) { 
+                localStorage.setItem("Username", loginDetails.Username);
+                navigate('/Fit');
+            }
+        } catch (error) {
+            if(error.response){
+                console.log("Error Occurred " + error.response.data.message);
+            }
+        }
+    }
+    const RegisterData = async (e) =>{
+        e.preventDefault();
+        try {
+            const response = await axios.post(`http://localhost:8000/Register`,signUp)
+            setSignup({
+                Username: "",
+                EmailID: "",
+                Password: "",
+                ConfirmPassword: ""
+            });
+            console.log(response.data)
+        } catch (error) {
+            if(error.response){
+                console.log("Error Occurred " + error.response.data.message);
+            }
+        }
+    }
+    const EnterButton = e =>{
+        if(e.key === "Enter"){
+            LoginUser()
+        }
+    }
     return (
         <>
             <div className="container">
@@ -41,11 +95,11 @@ const Login = () => {
                 </div>
                 <form className="login-container" style={{ display: showlogin ? "block" : "none" }}>
                     <label>Username : </label>
-                    <input type="text" autoFocus />
+                    <input type="text" value={loginDetails.Username} onKeyDown={EnterButton} name="Username" onChange={changeLoginDetails} autoFocus />
                     <label>Password : </label>
-                    <input type="password" />
+                    <input type="password" value={loginDetails.Password} name="Password" onChange={changeLoginDetails} />
                     <div className="bottom-container">
-                        <button className="login-btn">Login</button>
+                        <button className="login-btn" onClick={LoginUser}>Login</button>
                         <p>Or</p>
                         <div className="center-google">
                             <GoogleButton onClick={signWithGoogle} />
@@ -54,16 +108,15 @@ const Login = () => {
                 </form>
                 <form className="signup-container" style={{ display: showSignIn ? "block" : "none" }}>
                     <label>Username :</label>
-                    <input autoFocus type="text" />
+                    <input autoFocus value={signUp.Username} name="Username" type="text"  onChange={changeRegisterDetails}/>
                     <label>Email :</label>
-                    <input type="email" />
+                    <input type="email" value={signUp.EmailID} name="EmailID" onChange={changeRegisterDetails} />
                     <label>Password : </label>
-                    <input type="password" />
+                    <input type="password" value={signUp.Password} name="Password" onChange={changeRegisterDetails}/>
                     <label>Confirm Password :</label>
-                    <input type="password"/>
-                    <button className="register-btn">Register</button>
+                    <input type="password" value={signUp.ConfirmPassword} name="ConfirmPassword" onChange={changeRegisterDetails}/>
+                    <button className="register-btn"  onClick={RegisterData} >Register</button>
                 </form>
-
             </div>
         </>
     )

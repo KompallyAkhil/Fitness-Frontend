@@ -104,7 +104,6 @@ input:focus {
     background-color: #357ae8;
 }
 
-/* Login and Signup Form Containers */
 .login-container, .signup-container {
     display: flex;
     flex-direction: column;
