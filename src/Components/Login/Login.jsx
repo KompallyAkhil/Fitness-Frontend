@@ -45,7 +45,7 @@ const Login = () => {
                     <label>Password : </label>
                     <input type="password" />
                     <div className="bottom-container">
-                        <button>Login</button>
+                        <button className="login-btn">Login</button>
                         <p>Or</p>
                         <div className="center-google">
                             <GoogleButton onClick={signWithGoogle} />
@@ -61,7 +61,7 @@ const Login = () => {
                     <input type="password" />
                     <label>Confirm Password :</label>
                     <input type="password"/>
-                    <button>Register</button>
+                    <button className="register-btn">Register</button>
                 </form>
 
             </div>
