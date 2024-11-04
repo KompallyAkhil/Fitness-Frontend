@@ -14,8 +14,6 @@ const App = () => {
                 <Route path="/Fit" element={<Fit/>}></Route>
             </Route>
         </Routes>
-       
-          
         </>
     );
 };

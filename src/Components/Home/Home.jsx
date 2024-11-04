@@ -32,9 +32,9 @@ const Home = () => {
     useEffect(() => {
         setTimeout(() => {
             setShowBotMessage(true);
-        }, 3000);
+        }, 2000);
         return () => clearTimeout(); 
-    }, []);
+    }, [isOpen]);
     const clickEnter = (e) => {
         if (e.key === "Enter") sendMessage();
     }

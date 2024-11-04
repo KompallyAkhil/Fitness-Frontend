@@ -7,7 +7,7 @@ const Navbar = ({ scrollToSection, refs }) => {
         window.location.reload();
     }
     useEffect(()=>{
-        setUser(localStorage.getItem('email'))
+        setUser(localStorage.getItem('Username'))
     },[]);
     return (
         <nav className="header">
