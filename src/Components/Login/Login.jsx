@@ -13,9 +13,8 @@ const Login = () => {
     const [showSignIn, setSignIn] = useState(false)
     const signWithGoogle = () => {
         signInWithPopup(auth, provider).then((data) => {
-            console.log(data)
             setEmail(data.user.displayName.toLocaleUpperCase());
-            localStorage.setItem("Username", data.user);
+            localStorage.setItem("Username", data.user.displayName.toLocaleUpperCase());
             navigate('/Fit');
         })
     }
