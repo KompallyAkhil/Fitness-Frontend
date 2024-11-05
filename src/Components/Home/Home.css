@@ -127,7 +127,10 @@ flex-direction: column;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 800;
   border-bottom-left-radius: 15px;
+}
+.chat-input button{
   border-bottom-right-radius: 15px;
+  border: none;
 }
 .user .chat-image {
   order: 1;

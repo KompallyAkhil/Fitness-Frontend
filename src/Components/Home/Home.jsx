@@ -88,6 +88,7 @@ const Home = () => {
                                 required
                                 onKeyDown={clickEnter}
                             ></textarea>
+                            <button onClick={sendMessage}>Enter</button>
                         </div>
                     </div>
                 )}
