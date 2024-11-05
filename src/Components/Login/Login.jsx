@@ -51,7 +51,7 @@ const Login = () => {
     const LoginUser = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:8000/SignIn`,loginDetails);
+            const response = await axios.post(`https://fitness-backend-six.vercel.app/SignIn`,loginDetails);
             console.log(response.data)
             setStatus(response.data.loginStatus);
             if (response.data.loginStatus) { 
@@ -67,7 +67,7 @@ const Login = () => {
     const RegisterData = async (e) =>{
         e.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:8000/Register`,signUp)
+            const response = await axios.post(`https://fitness-backend-six.vercel.app/Register`,signUp)
             setSignup({
                 Username: "",
                 EmailID: "",

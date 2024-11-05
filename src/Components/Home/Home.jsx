@@ -21,7 +21,7 @@ const Home = () => {
             const newMessage = { text: isInput, isUser: true };
             setMessages([...messages, newMessage]);
             setIsInput("");
-            const response = await axios.get(`http://localhost:8000/chat?text=${isInput}`);
+            const response = await axios.get(`https://fitness-backend-six.vercel.app/chat?text=${isInput}`);
             const result = response.data.response;
             setTimeout(() => {
                 const botMessage = { text: result, isUser: false };
