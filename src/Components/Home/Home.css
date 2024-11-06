@@ -129,8 +129,9 @@ flex-direction: column;
   border-bottom-left-radius: 15px;
 }
 .chat-input button{
+  font-weight: 800;
   border-bottom-right-radius: 15px;
-  border: none;
+  border :1px solid black;
 }
 .user .chat-image {
   order: 1;
