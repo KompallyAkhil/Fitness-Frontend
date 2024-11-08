@@ -15,7 +15,6 @@ const Fit = () =>{
             window.scrollTo({ top: position, behavior: "smooth" });
         }
         ref.current?.scrollIntoView({ behavior: "smooth" });
-        console.log(ref.current);
     }
     return (
         <>
