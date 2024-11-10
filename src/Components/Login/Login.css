@@ -3,6 +3,7 @@ html{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 .container {
     width: 500px;
@@ -12,8 +13,17 @@ html{
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 30px;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.bg-image{
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
 }
 .login-container{
     margin-top: 35px;
@@ -24,25 +34,23 @@ html{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     cursor: pointer;
 }
-
 .container-heading h1 {
     font-size: 24px;
     font-weight: 600;
-    color: #333;
+    color:white;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s, color 0.3s;
 }
-
 .container-heading h1:hover, 
 .container-heading h1.active {
-    border-color: #0077ff;
-    color: #0077ff;
+    border-color: white;
+    color: gray;
 }
 
 label {
     font-size: 18px;
     font-weight: 800;
-    color: #333;
+    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 5px;
     display: block;
@@ -52,17 +60,13 @@ input {
     height: 30px;
     margin-bottom: 20px;
     padding: 8px;
-    border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
     outline: none;
+    color: white;
+    background-color: inherit;
     transition: border-color 0.3s;
 }
-
-input:focus {
-    border-color: #0077ff;
-}
-
 .login-btn {
     width: 100%;
     height: 45px;
@@ -99,21 +103,17 @@ input:focus {
     align-items: center;
     justify-content: center;
 }
-
 .GoogleButton:hover {
     background-color: #357ae8;
 }
-
 .login-container, .signup-container {
     display: flex;
     flex-direction: column;
 }
-
 .login-container {
     display: flex;
     flex-direction: column;
 }
-
 .signup-container {
     display: none;
 }
@@ -128,7 +128,11 @@ input:focus {
     color: blue;
     cursor: pointer;
 }
+.bottom-container p{
+    color: white;
+}
 button {
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+} 
+ 

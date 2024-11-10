@@ -5,6 +5,7 @@ import { auth, provider } from "../Config/Config.js"
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
+import login from "./login.jpg";
 import "./Login.css"
 const Login = () => {
     const navigate = useNavigate()
@@ -61,7 +62,11 @@ const Login = () => {
             }
         } catch (error) {
             if (error.response) {
-                toast.error(error.response?.data?.message);
+                toast.error(error.response?.data?.message,{style: {
+                    borderRadius: '10px',
+                    background: '#333',
+                    color: '#fff',
+                  }});
             }
         }
     }
@@ -75,10 +80,18 @@ const Login = () => {
                 Password: "",
                 ConfirmPassword: ""
             });
-            toast.success('Successfully Registered');
+            toast.success('Successfully Registered',{style: {
+                borderRadius: '10px',
+                background: '#333',
+                color: '#fff',
+              }});
         } catch (error) {
             if (error.response) {
-                toast.error(error.response?.data?.message);
+                toast.error(error.response?.data?.message,{style: {
+                    borderRadius: '10px',
+                    background: '#333',
+                    color: '#fff',
+                  }})
             }
         }
     }
@@ -97,7 +110,7 @@ const Login = () => {
             <Toaster />
             <div className="container">
                 <div className="container-heading">
-                    <h1 onClick={showLogin} >Login In</h1>
+                    <h1 onClick={showLogin} >Sign In</h1>
                     <h1 onClick={showSignUp} >Sign Up</h1>
                 </div>
                 <form className="login-container" style={{ display: showlogin ? "block" : "none" }}>
@@ -111,7 +124,7 @@ const Login = () => {
                         <div className="center-google">
                             <GoogleButton onClick={signWithGoogle} />
                         </div>
-                        <p >Not registered ? <a className="bottom-anchor" onClick={showSignUp}>Create an account</a> </p>
+                        <p>Not registered ? <a className="bottom-anchor" onClick={showSignUp}>Create an account</a> </p>
                     </div>
                 </form>
                 <form className="signup-container" style={{ display: showSignIn ? "block" : "none" }}>
@@ -126,6 +139,7 @@ const Login = () => {
                     <button className="register-btn" onClick={RegisterData} >Register</button>
                 </form>
             </div>
+                <img className="bg-image" src={login}/>
         </>
     )
 }
