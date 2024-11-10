@@ -3,6 +3,7 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import FAQ from "../FAQ/FAQ";
 import Navbar from "../Navbar/Navbar";
+import Foooter from "../Footer/Footer"
 const Fit = () =>{
     const homeRef = useRef(null);
     const aboutRef = useRef(null);
@@ -28,6 +29,7 @@ const Fit = () =>{
             <div ref={faqRef}>
                 <FAQ/>
             </div>
+            <Foooter/>
         </>
     )
 }
