@@ -68,7 +68,7 @@ const Login = () => {
     const RegisterData = async (e) =>{
         e.preventDefault();
         try {
-            const response = await axios.post(`https://fitness-backend-six.vercel.app/Register`,signUp)
+            const response = await axios.post(`https://fitness-backend-six.vercel.app/Register`,signUp);
             setSignup({
                 Username: "",
                 EmailID: "",
@@ -94,7 +94,7 @@ const Login = () => {
     }
     return (
         <>
-        <Toaster /> 
+        <Toaster  /> 
             <div className="container">
                 <div className="container-heading">
                     <h1 onClick={showLogin} >Login In</h1>

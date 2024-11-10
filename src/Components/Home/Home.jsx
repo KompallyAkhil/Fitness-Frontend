@@ -4,6 +4,7 @@ import bot from "./bot.png"
 import user from "./user.png"
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import sent from "./sent.jpg";
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isInput, setIsInput] = useState("");
@@ -88,7 +89,7 @@ const Home = () => {
                                 required
                                 onKeyDown={clickEnter}
                             ></textarea>
-                            <button onClick={sendMessage}>Enter</button>
+                            <button onClick={sendMessage}><img className="chat-image" src={sent}/></button>
                         </div>
                     </div>
                 )}

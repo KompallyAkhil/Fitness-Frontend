@@ -131,7 +131,11 @@ flex-direction: column;
 .chat-input button{
   font-weight: 800;
   border-bottom-right-radius: 15px;
-  border :1px solid black;
+  background-color: white;
+}
+.chat-image{
+  height: 45px;
+  width: 40px;
 }
 .user .chat-image {
   order: 1;
