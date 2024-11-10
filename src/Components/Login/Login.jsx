@@ -9,17 +9,17 @@ import "./Login.css"
 const Login = () => {
     const navigate = useNavigate()
     const [email, setEmail] = useState('');
-    const [loginDetails,setLoginDetails] = useState({
-        Username : "",
-        Password : ""
+    const [loginDetails, setLoginDetails] = useState({
+        Username: "",
+        Password: ""
     })
-    const [signUp,setSignup] = useState({
-        Username : "",
-        EmailID : "",
-        Password : "",
-        ConfirmPassword : ""
+    const [signUp, setSignup] = useState({
+        Username: "",
+        EmailID: "",
+        Password: "",
+        ConfirmPassword: ""
     })
-    const [status,setStatus] = useState(false);
+    const [status, setStatus] = useState(false);
     const [showlogin, setShowLogin] = useState(true);
     const [showSignIn, setSignIn] = useState(false)
     const signWithGoogle = () => {
@@ -44,31 +44,31 @@ const Login = () => {
         setSignIn(true);
     }
     const changeLoginDetails = e => {
-        setLoginDetails({...loginDetails ,[e.target.name] : e.target.value});
+        setLoginDetails({ ...loginDetails, [e.target.name]: e.target.value });
     }
     const changeRegisterDetails = e => {
-        setSignup({...signUp,[e.target.name]:e.target.value});
+        setSignup({ ...signUp, [e.target.name]: e.target.value });
     }
     const LoginUser = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`https://fitness-backend-six.vercel.app/SignIn`,loginDetails);
+            const response = await axios.post(`https://fitness-backend-six.vercel.app/SignIn`, loginDetails);
             setStatus(response.data.loginStatus);
-            if (response.data.loginStatus) { 
+            if (response.data.loginStatus) {
                 toast.success('Successfully Login');
                 localStorage.setItem("Username", loginDetails.Username);
                 navigate('/Fit');
             }
         } catch (error) {
-            if(error.response){
+            if (error.response) {
                 toast.error(error.response?.data?.message);
             }
         }
     }
-    const RegisterData = async (e) =>{
+    const RegisterData = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`https://fitness-backend-six.vercel.app/Register`,signUp);
+            const response = await axios.post(`https://fitness-backend-six.vercel.app/Register`, signUp);
             setSignup({
                 Username: "",
                 EmailID: "",
@@ -77,24 +77,24 @@ const Login = () => {
             });
             toast.success('Successfully Registered');
         } catch (error) {
-            if(error.response){
+            if (error.response) {
                 toast.error(error.response?.data?.message);
             }
         }
     }
-    const EnterButton = e =>{
-        if(e.key === "Enter"){
+    const EnterButton = e => {
+        if (e.key === "Enter") {
             LoginUser();
         }
     }
-    const enterRegister = e =>{
-        if(e.key === "Enter"){
+    const enterRegister = e => {
+        if (e.key === "Enter") {
             RegisterData();
         }
     }
     return (
         <>
-        <Toaster  /> 
+            <Toaster />
             <div className="container">
                 <div className="container-heading">
                     <h1 onClick={showLogin} >Login In</h1>
@@ -107,22 +107,23 @@ const Login = () => {
                     <input type="password" value={loginDetails.Password} name="Password" onChange={changeLoginDetails} />
                     <div className="bottom-container">
                         <button className="login-btn" onClick={LoginUser}>Login</button>
-                        <p>Or</p>
+                        <p className="bottom-para">Or</p>
                         <div className="center-google">
                             <GoogleButton onClick={signWithGoogle} />
                         </div>
+                        <p >Not registered ? <a className="bottom-anchor" onClick={showSignUp}>Create an account</a> </p>
                     </div>
                 </form>
                 <form className="signup-container" style={{ display: showSignIn ? "block" : "none" }}>
                     <label>Username :</label>
-                    <input autoFocus value={signUp.Username} name="Username" onKeyDown={enterRegister} type="text"  onChange={changeRegisterDetails}/>
+                    <input autoFocus value={signUp.Username} name="Username" onKeyDown={enterRegister} type="text" onChange={changeRegisterDetails} />
                     <label>Email :</label>
                     <input type="email" value={signUp.EmailID} name="EmailID" onChange={changeRegisterDetails} />
                     <label>Password : </label>
-                    <input type="password" value={signUp.Password} name="Password" onChange={changeRegisterDetails}/>
+                    <input type="password" value={signUp.Password} name="Password" onChange={changeRegisterDetails} />
                     <label>Confirm Password :</label>
-                    <input type="password" value={signUp.ConfirmPassword} name="ConfirmPassword" onChange={changeRegisterDetails}/>
-                    <button className="register-btn"  onClick={RegisterData} >Register</button>
+                    <input type="password" value={signUp.ConfirmPassword} name="ConfirmPassword" onChange={changeRegisterDetails} />
+                    <button className="register-btn" onClick={RegisterData} >Register</button>
                 </form>
             </div>
         </>

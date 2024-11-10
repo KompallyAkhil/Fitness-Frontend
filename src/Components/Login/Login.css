@@ -120,9 +120,13 @@ input:focus {
 .bottom-container{
     text-align: center;
 }
-.bottom-container p {
+.bottom-para {
     font-weight: 800;
     font-size: 20px;
+}
+.bottom-anchor{
+    color: blue;
+    cursor: pointer;
 }
 button {
     cursor: pointer;
