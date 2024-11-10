@@ -4,6 +4,7 @@ import GoogleButton from 'react-google-button'
 import { auth, provider } from "../Config/Config.js"
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
 import "./Login.css"
 const Login = () => {
     const navigate = useNavigate()
@@ -52,15 +53,15 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post(`https://fitness-backend-six.vercel.app/SignIn`,loginDetails);
-            console.log(response.data)
             setStatus(response.data.loginStatus);
             if (response.data.loginStatus) { 
+                toast.success('Successfully Login');
                 localStorage.setItem("Username", loginDetails.Username);
                 navigate('/Fit');
             }
         } catch (error) {
             if(error.response){
-                console.log("Error Occurred " + error.response.data.message);
+                toast.error(error.response?.data?.message);
             }
         }
     }
@@ -74,20 +75,26 @@ const Login = () => {
                 Password: "",
                 ConfirmPassword: ""
             });
-            console.log(response.data)
+            toast.success('Successfully Registered');
         } catch (error) {
             if(error.response){
-                console.log("Error Occurred " + error.response.data.message);
+                toast.error(error.response?.data?.message);
             }
         }
     }
     const EnterButton = e =>{
         if(e.key === "Enter"){
-            LoginUser()
+            LoginUser();
+        }
+    }
+    const enterRegister = e =>{
+        if(e.key === "Enter"){
+            RegisterData();
         }
     }
     return (
         <>
+        <Toaster /> 
             <div className="container">
                 <div className="container-heading">
                     <h1 onClick={showLogin} >Login In</h1>
@@ -108,7 +115,7 @@ const Login = () => {
                 </form>
                 <form className="signup-container" style={{ display: showSignIn ? "block" : "none" }}>
                     <label>Username :</label>
-                    <input autoFocus value={signUp.Username} name="Username" type="text"  onChange={changeRegisterDetails}/>
+                    <input autoFocus value={signUp.Username} name="Username" onKeyDown={enterRegister} type="text"  onChange={changeRegisterDetails}/>
                     <label>Email :</label>
                     <input type="email" value={signUp.EmailID} name="EmailID" onChange={changeRegisterDetails} />
                     <label>Password : </label>
