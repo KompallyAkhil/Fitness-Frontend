@@ -55,7 +55,6 @@ Check out the live demo of FitGenie:
    cd backend
    nodemon index.js
 
-
 Conclusion ✨
 
 
