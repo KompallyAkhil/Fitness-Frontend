@@ -37,9 +37,6 @@ Check out the live demo of FitGenie:
 - **AI Integration**: Google Generative AI (Gemini 1.5 Pro)
 - **Environment Management**: `dotenv`
 - **CORS**: Configured to allow multiple origins.
-
-### Database (Optional):
-If you’re planning to integrate a database:
 - **MongoDB** or **Firebase**: For user data storage and management.
 
 ---
