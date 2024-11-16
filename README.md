@@ -1,44 +1,71 @@
-# FitGenie 🏋️‍♂️🥗
+# FitGenie 🏋️‍♀️🥗
 
-**FitGenie** is an intelligent chatbot platform designed to provide personalized workout plans, diet plans, and healthy recipes. Whether you're aiming for a fitness goal, improving your nutrition, or simply exploring new ways to stay healthy, FitGenie is here to guide you!
+**FitGenie** is your intelligent fitness companion, designed to help users achieve their health and wellness goals. With tailored workout routines, personalized diet plans, and healthy recipe suggestions, FitGenie makes staying fit and healthy easier and more engaging than ever before.
+
+---
+
+## Table of Contents 📑
+1. [Features](#features)
+2. [Live Demo](#live-demo)
+3. [Tech Stack](#tech-stack)
+4. [Installation and Setup](#installation-and-setup)
+5. [Usage](#usage)
+6. [Project Structure](#project-structure)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact](#contact)
 
 ---
 
 ## Features 🚀
-- **Personalized Workout Plans**: Tailored routines based on user preferences and goals.
-- **Diet Recommendations**: Customized diet plans to complement fitness goals.
-- **Recipe Suggestions**: Healthy, easy-to-make recipes that align with your nutritional needs.
-- **User Interaction**: Engage with the chatbot for fitness advice and detailed responses.
+
+- **Interactive Chatbot**: Engage in real-time conversations to receive fitness advice and recommendations.
+- **Customized Workout Plans**: Get workouts tailored to your preferences, goals, and fitness level.
+- **Dietary Guidance**: Receive diet plans that complement your fitness objectives, whether it's weight loss, muscle gain, or general health.
+- **Healthy Recipes**: Access a library of nutritious and easy-to-follow recipes.
+- **User Accounts**: Sign up and log in to save your preferences and progress.
+- **Speech Synthesis** (Optional): Experience a voice-enabled chatbot for hands-free interaction.
 
 ---
 
-## Demo 🌐
-You can access the live version of FitGenie here: [FitGenie Demo](#)  
-(*Replace `#` with your actual project URL*)
+## Live Demo 🌐
+
+Check out the live demo of FitGenie:  
+[FitGenie Live](#)  
+(*Replace `#` with the actual project URL*)
 
 ---
 
-## Technologies Used 🛠️
+## Tech Stack 🛠️
+
 ### Frontend:
-- **React.js**: User interface for a seamless chatbot experience.
-- **CSS Modules**: Styling for responsive and interactive layouts.
+- **React.js**: Building dynamic and responsive user interfaces.
+- **React Router**: Managing navigation between pages.
+- **CSS Modules**: Modular and scoped styling for components.
+- **React Toastify**: Displaying interactive notifications to enhance user experience.
 
 ### Backend:
-- **Node.js**: Server-side processing.
-- **Express.js**: API endpoints for chatbot interactions.
-- **Google Generative AI (Gemini Model)**: To generate accurate and informative responses.
+- **Node.js**: Providing a scalable and efficient server-side environment.
+- **Express.js**: Simplifying API development and server routing.
+- **Google Generative AI (Gemini Model)**: Powering the chatbot's intelligent responses using advanced natural language processing.
 
-### Additional Libraries:
-- **Axios**: For API communication between the frontend and backend.
-- **React Toastify**: For displaying notifications.
-- **react-speech-kit** (optional): For text-to-speech conversion.
+### Additional Tools and Libraries:
+- **Axios**: Seamless communication between frontend and backend.
+- **JWT (JSON Web Tokens)**: Securing user authentication and authorization.
+- **react-speech-kit**: Optional integration for speech synthesis.
+- **nodemon**: Assisting in backend development by auto-restarting the server during changes.
+
+### Database (Optional):
+If you’re planning to integrate a database:
+- **MongoDB** or **Firebase**: For user data storage and management.
 
 ---
 
-## Installation 🖥️
+## Installation and Setup 🖥️
 
 ### Prerequisites:
-- **Node.js** and **npm** installed on your machine.
+- **Node.js** and **npm/yarn** installed.
+- A modern web browser.
 
 ### Steps:
 1. Clone the repository:
