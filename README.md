@@ -50,5 +50,5 @@ Check out the live demo of FitGenie:
 ### Steps:
 1. Clone the repository:
    ```bash
-     https://github.com/KompallyAkhil/Fitness-Frontend.git
+   https://github.com/KompallyAkhil/Fitness-Frontend.git
    cd FitGenie
