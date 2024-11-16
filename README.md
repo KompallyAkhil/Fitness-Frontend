@@ -16,8 +16,7 @@
 ## Live Demo 🌐
 
 Check out the live demo of FitGenie:  
-[FitGenie Live](#)  
-(*Replace `#` with the actual project URL*)
+[FitGenie Live](https://fitness-bot-lilac.vercel.app/Login)  
 
 ---
 
@@ -33,12 +32,11 @@ Check out the live demo of FitGenie:
 - **Node.js**: Providing a scalable and efficient server-side environment.
 - **Express.js**: Simplifying API development and server routing.
 - **Google Generative AI (Gemini Model)**: Powering the chatbot's intelligent responses using advanced natural language processing.
-
-### Additional Tools and Libraries:
-- **Axios**: Seamless communication between frontend and backend.
-- **JWT (JSON Web Tokens)**: Securing user authentication and authorization.
-- **react-speech-kit**: Optional integration for speech synthesis.
-- **nodemon**: Assisting in backend development by auto-restarting the server during changes.
+- **Runtime**: Node.js
+- **Authentication**: `bcrypt`
+- **AI Integration**: Google Generative AI (Gemini 1.5 Pro)
+- **Environment Management**: `dotenv`
+- **CORS**: Configured to allow multiple origins.
 
 ### Database (Optional):
 If you’re planning to integrate a database:
