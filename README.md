@@ -2,20 +2,6 @@
 
 **FitGenie** is your intelligent fitness companion, designed to help users achieve their health and wellness goals. With tailored workout routines, personalized diet plans, and healthy recipe suggestions, FitGenie makes staying fit and healthy easier and more engaging than ever before.
 
----
-
-## Table of Contents 📑
-1. [Features](#features)
-2. [Live Demo](#live-demo)
-3. [Tech Stack](#tech-stack)
-4. [Installation and Setup](#installation-and-setup)
-5. [Usage](#usage)
-6. [Project Structure](#project-structure)
-7. [Contributing](#contributing)
-8. [License](#license)
-9. [Contact](#contact)
-
----
 
 ## Features 🚀
 
@@ -24,7 +10,6 @@
 - **Dietary Guidance**: Receive diet plans that complement your fitness objectives, whether it's weight loss, muscle gain, or general health.
 - **Healthy Recipes**: Access a library of nutritious and easy-to-follow recipes.
 - **User Accounts**: Sign up and log in to save your preferences and progress.
-- **Speech Synthesis** (Optional): Experience a voice-enabled chatbot for hands-free interaction.
 
 ---
 
