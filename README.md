@@ -47,8 +47,10 @@ Check out the live demo of FitGenie:
 1. Clone the repository:
    ```bash
    https://github.com/KompallyAkhil/Fitness-Frontend.git
-   cd FitGenie
-
-### Prerequisites:
-- **Node.js** and **npm/yarn** installed.
-- A modern web browser.
+   cd frontend
+   npm start
+2. Clone the repository:
+   ```bash
+   https://github.com/KompallyAkhil/Fitness-Backend.git
+   cd backend
+   nodemon index.js
