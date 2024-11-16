@@ -83,7 +83,6 @@ flex-direction: column;
   display: flex;
   gap: 10px;
   justify-content: center;
-
   font-weight: 800;
   border-radius: 15px;
   font-size: 14px;
@@ -125,7 +124,7 @@ flex-direction: column;
   resize: none;
   font-size: 14px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   border-bottom-left-radius: 15px;
 }
 .chat-input button{
@@ -140,6 +139,5 @@ flex-direction: column;
 .user .chat-image {
   order: 1;
   margin-left: 8px;
-
 }
 

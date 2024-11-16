@@ -41,12 +41,6 @@ html{
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s, color 0.3s;
 }
-.container-heading h1:hover, 
-.container-heading h1.active {
-    border-color: white;
-    color: gray;
-}
-
 label {
     font-size: 18px;
     font-weight: 800;
@@ -125,8 +119,9 @@ input {
     font-size: 20px;
 }
 .bottom-anchor{
-    color: blue;
     cursor: pointer;
+    color: black;
+    font-weight: 500;
 }
 .bottom-container p{
     color: white;
