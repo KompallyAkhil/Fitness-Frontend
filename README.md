@@ -43,12 +43,12 @@ Check out the live demo of FitGenie:
 
 ## Installation and Setup 🖥️
 
-### Prerequisites:
-- **Node.js** and **npm/yarn** installed.
-- A modern web browser.
-
 ### Steps:
 1. Clone the repository:
    ```bash
    https://github.com/KompallyAkhil/Fitness-Frontend.git
    cd FitGenie
+
+### Prerequisites:
+- **Node.js** and **npm/yarn** installed.
+- A modern web browser.
