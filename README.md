@@ -15,8 +15,7 @@
 
 ## Live Demo 🌐
 
-Check out the live demo of FitGenie:  
-[FitGenie Live](https://fitness-bot-lilac.vercel.app/Login)  
+Check out the live demo of FitGenie:  [FitGenie Live](https://fitness-bot-lilac.vercel.app/Login)  
 
 ---
 
