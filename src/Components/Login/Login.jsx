@@ -6,7 +6,7 @@ import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 import login from "./login.jpg";
-import "./Login.css"
+import "./Login.css";
 const Login = () => {
     const navigate = useNavigate()
     const [email, setEmail] = useState('');
@@ -91,7 +91,7 @@ const Login = () => {
                     borderRadius: '10px',
                     background: '#333',
                     color: '#fff',
-                  }})
+                  }});
             }
         }
     }
