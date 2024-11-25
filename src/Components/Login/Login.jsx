@@ -53,7 +53,7 @@ const Login = () => {
     const LoginUser = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`https://fit-bot-backend.vercel.app/SignIn`, loginDetails);
+            const response = await axios.post(`https://fitness-backend-six.vercel.app/SignIn`, loginDetails);
             setStatus(response.data.loginStatus);
             if (response.data.loginStatus) {
                 toast.success('Successfully Login');
@@ -73,7 +73,7 @@ const Login = () => {
     const RegisterData = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`https://fit-bot-backend.vercel.app/Register`, signUp);
+            const response = await axios.post(`https://fitness-backend-six.vercel.app/Register`, signUp);
             setSignup({
                 Username: "",
                 EmailID: "",
