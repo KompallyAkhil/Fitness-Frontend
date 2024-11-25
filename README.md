@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# FitGenie 🏋️‍♀️🥗
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**FitGenie** is your intelligent fitness companion, designed to help users achieve their health and wellness goals. With tailored workout routines, personalized diet plans, and healthy recipe suggestions, FitGenie makes staying fit and healthy easier and more engaging than ever before.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features 🚀
 
-### `npm start`
+- **Interactive Chatbot**: Engage in real-time conversations to receive fitness advice and recommendations.
+- **Customized Workout Plans**: Get workouts tailored to your preferences, goals, and fitness level.
+- **Dietary Guidance**: Receive diet plans that complement your fitness objectives, whether it's weight loss, muscle gain, or general health.
+- **Healthy Recipes**: Access a library of nutritious and easy-to-follow recipes.
+- **User Accounts**: Sign up and log in to save your preferences and progress.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Live Demo 🌐
 
-### `npm test`
+Check out the live demo of FitGenie:  [FitGenie Live](https://fitness-bot-lilac.vercel.app/Login)  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Tech Stack 🛠️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend:
+- **React.js**: Building dynamic and responsive user interfaces.
+- **React Router**: Managing navigation between pages.
+- **CSS Modules**: Modular and scoped styling for components.
+- **React Toastify**: Displaying interactive notifications to enhance user experience.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend:
+- **Node.js**: Providing a scalable and efficient server-side environment.
+- **Express.js**: Simplifying API development and server routing.
+- **Google Generative AI (Gemini Model)**: Powering the chatbot's intelligent responses using advanced natural language processing.
+- **Runtime**: Node.js
+- **Authentication**: `bcrypt`
+- **AI Integration**: Google Generative AI (Gemini 1.5 Pro)
+- **Environment Management**: `dotenv`
+- **CORS**: Configured to allow multiple origins.
+- **MongoDB** or **Firebase**: For user data storage and management.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Installation and Setup 🖥️
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Steps:
+1. Clone the repository:
+   ```bash
+   https://github.com/KompallyAkhil/Fitness-Frontend.git
+   cd frontend
+   npm start
+2. Clone the repository:
+   ```bash
+   https://github.com/KompallyAkhil/Fitness-Backend.git
+   cd backend
+   nodemon index.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Conclusion ✨
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ - The FitGenie Backend provides a robust and scalable solution for enabling AI-powered fitness assistance and user management. With seamless integration of Google Generative AI and MongoDB, this backend serves as the backbone for delivering personalized workout, diet, and nutrition recommendations to users.
 
-## Learn More
+We’re excited to see how this project evolves, and we welcome your feedback and contributions to make FitGenie even better!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Stay Connected 🌐
+ - Project Updates: Follow our journey on GitHub for regular updates and improvements.
+ - Need Help?: If you have any questions or encounter issues, feel free to open a GitHub issue or contact us directly.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy coding! 💻🎉
