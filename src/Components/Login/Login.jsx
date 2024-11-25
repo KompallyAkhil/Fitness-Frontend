@@ -13,13 +13,13 @@ const Login = () => {
     const [loginDetails, setLoginDetails] = useState({
         Username: "",
         Password: ""
-    })
+    });
     const [signUp, setSignup] = useState({
         Username: "",
         EmailID: "",
         Password: "",
         ConfirmPassword: ""
-    })
+    });
     const [status, setStatus] = useState(false);
     const [showlogin, setShowLogin] = useState(true);
     const [showSignIn, setSignIn] = useState(false)
