@@ -104,7 +104,6 @@ const Login = () => {
         if (e.key === "Enter") {
             RegisterData();
         }
-        
     }
     return (
         <>
