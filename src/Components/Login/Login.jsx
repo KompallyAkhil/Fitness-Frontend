@@ -22,7 +22,8 @@ const Login = () => {
     });
     const [status, setStatus] = useState(false);
     const [showlogin, setShowLogin] = useState(true);
-    const [showSignIn, setSignIn] = useState(false)
+    const [showSignIn, setSignIn] = useState(false);
+    const [token, setToken] = useState("");
     const signWithGoogle = () => {
         signInWithPopup(auth, provider).then((data) => {
             setEmail(data.user.displayName.toLocaleUpperCase());
@@ -55,9 +56,12 @@ const Login = () => {
         try {
             const response = await axios.post(`https://fitness-backend-six.vercel.app/SignIn`, loginDetails);
             setStatus(response.data.loginStatus);
+            const decodeToken = JSON.parse(atob(response.data.token.split('.')[1]));
+            console.log(response.data.token);  
+            setToken(response.data.token);
             if (response.data.loginStatus) {
                 toast.success('Successfully Login');
-                localStorage.setItem("Username", loginDetails.Username);
+                localStorage.setItem("Username", decodeToken.Username);
                 navigate('/Fit');
             }
         } catch (error) {
@@ -104,7 +108,7 @@ const Login = () => {
         if (e.key === "Enter") {
             RegisterData();
         }
-    }
+    }    
     return (
         <>
             <Toaster />
