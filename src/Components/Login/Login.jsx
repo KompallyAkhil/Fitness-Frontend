@@ -57,7 +57,6 @@ const Login = () => {
             const response = await axios.post(`https://fitness-backend-six.vercel.app/SignIn`, loginDetails);
             setStatus(response.data.loginStatus);
             const decodeToken = JSON.parse(atob(response.data.token.split('.')[1]));
-            console.log(response.data.token);  
             setToken(response.data.token);
             if (response.data.loginStatus) {
                 toast.success('Successfully Login');
