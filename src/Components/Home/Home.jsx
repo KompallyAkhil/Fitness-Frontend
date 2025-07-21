@@ -34,7 +34,7 @@ const Home = () => {
         setTimeout(() => {
             setShowBotMessage(true);
         }, 2000);
-        return () => clearTimeout(); 
+        return () => clearTimeout();
     }, [isOpen]);
     const clickEnter = (e) => {
         if (e.key === "Enter") sendMessage();
@@ -71,13 +71,13 @@ const Home = () => {
                                 </div>
                             )}
                             {messages.map((msg, index) => (
-                                <div key={index} className={`chat-bubble ${msg.isUser ? 'user' : 'bot'}`}>
+                                <div key={index} className={`chat-bubble ${msg.isUser ? "user" : "bot"}`}>
                                     {msg.isUser && <img className="chat-image" src={user} alt="User" />}
                                     {!msg.isUser && <img className="chat-image" src={bot} alt="Bot" />}
-                                    {msg.text}
+                                        {msg.text}
                                 </div>
                             ))}
-                            <div ref={messagesEndRef}/>
+                            <div ref={messagesEndRef} />
                         </div>
                         <div className="chat-input">
                             <textarea
@@ -89,7 +89,7 @@ const Home = () => {
                                 required
                                 onKeyDown={clickEnter}
                             ></textarea>
-                            <button onClick={sendMessage}><img className="chat-image" src={sent}/></button>
+                            <button onClick={sendMessage}><img className="chat-image" src={sent} /></button>
                         </div>
                     </div>
                 )}

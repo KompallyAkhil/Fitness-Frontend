@@ -14,10 +14,12 @@
     "react-dom": "^18.3.1",
     "react-google-button": "^0.8.0",
     "react-hot-toast": "^2.4.1",
+    "react-markdown": "^9.0.3",
     "react-page-scroll": "^1.0.6",
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0",
+    "rehype-highlight": "^7.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
